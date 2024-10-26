@@ -1,0 +1,42 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node ./dist/src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
+    "db:push": "drizzle-kit push",
+    "db:studio": "pnpm drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.2",
+    "@hono/zod-openapi": "^0.16.4",
+    "@scalar/hono-api-reference": "^0.5.156",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.6",
+    "drizzle-orm": "^0.35.3",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.6.6",
+    "hono-pino": "^0.4.0",
+    "pg": "^8.13.1",
+    "pino": "^9.5.0",
+    "pino-pretty": "^11.3.0",
+    "postgres": "^3.4.5",
+    "stoker": "^1.2.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
+    "@types/node": "^20.17.1",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.26.2",
+    "eslint": "^9.13.0",
+    "eslint-plugin-format": "^0.1.2",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}
